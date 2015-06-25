@@ -29,19 +29,32 @@ namespace BeginnerApp
 
             FileInfo file;
             StreamReader sr = null;
+            TextWriter tw = null;
 
             try
             {
                // FileInfo newFile = new FileInfo(System.Environment.);
                // Console.WriteLine(newFile);
-                file = new FileInfo("C:\\hello.txt");
+                file = new FileInfo("C:\\Users\\micha\\Desktop\\hello.txt");
                 Console.WriteLine(file);
+                /* String[] drives = Directory.GetFiles("C:\\");
+                 for (int i = 0; i < drives.Length; i++)
+                 {
+                     Console.WriteLine(drives[i]);
+                 }
+                 */
 
-                string[] drives = Directory.GetFiles("C:\\");
-                for (int i = 0; i < drives.Length; i++)
+                string path = "C:\\Users\\micha\\Desktop\\Example.txt";
+                if (!File.Exists(path))
                 {
-                    Console.WriteLine(drives[i]);
+                    File.Create(path);
+                    tw = new StreamWriter(path);
                 }
+                else if (File.Exists(path))
+                {
+                   tw = new StreamWriter(path);
+                }
+
 
                 if (file.Exists)
                 {
@@ -49,14 +62,19 @@ namespace BeginnerApp
                     String line = sr.ReadLine();
                     while(line != null && line.Length > 0)
                     {
-                        Console.WriteLine(line);
                         line = sr.ReadLine();
+                        tw.WriteLine(line);
                     }
                 } else
                 {
                     Console.WriteLine("File Doesn't Exist");
                 }
-               
+
+
+
+
+
+
 
 
                 Console.ReadKey();
@@ -79,6 +97,9 @@ namespace BeginnerApp
                 if (sr != null)
                 {
                     sr.Close();
+                }
+                if (tw != null) {
+                    tw.Close();
                 }
                 
             }
