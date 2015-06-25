@@ -18,11 +18,12 @@ namespace Model
         {
             get
             {
-                Console.Write("Returning Message!");
+                Console.WriteLine("Returning Message!");
                 return this.message;
             }
             set
             {
+                Console.WriteLine("Setting Message!");
                 this.message = value;
             }
         }
