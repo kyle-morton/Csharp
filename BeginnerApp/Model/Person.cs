@@ -18,6 +18,7 @@ namespace Model
         {
             get
             {
+                Console.Write("Returning Message!");
                 return this.message;
             }
             set
