@@ -18,12 +18,16 @@ namespace Model
         {
             get
             {
-                Console.Write("Returning Message!");
+                Console.WriteLine("Returning Message!");
                 return this.message;
             }
             set
             {
+<<<<<<< HEAD
                 Console.Write("Setting Message!");
+=======
+                Console.WriteLine("Setting Message!");
+>>>>>>> sideBranch
                 this.message = value;
             }
         }
