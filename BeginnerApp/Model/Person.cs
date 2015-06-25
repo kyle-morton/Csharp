@@ -23,6 +23,7 @@ namespace Model
             }
             set
             {
+                Console.Write("Setting Message!");
                 this.message = value;
             }
         }
