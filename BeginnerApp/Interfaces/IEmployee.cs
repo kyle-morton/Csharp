@@ -9,6 +9,7 @@ namespace Interfaces
     interface IEmployee
     {
     
+        //Forces Implementer to have property Message
         String Message { get; set; }
 
         String sayHello();

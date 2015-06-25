@@ -10,8 +10,10 @@ namespace Model
     class Person : IEmployee
     {
 
+        //Backing field for property
         private String message;
 
+        //implements IEmployee so must have property
         public String Message
         {
             get
@@ -30,6 +32,7 @@ namespace Model
         //Public Property (Mutators)
         public String personName { get; set; }
 
+        //implementing interface method
         public string sayHello()
         {
            return "Saying Hello....";
