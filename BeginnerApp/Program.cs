@@ -14,6 +14,9 @@ namespace BeginnerApp
             Person p = new Person();
             p.personName = "Ted";
             Console.WriteLine("Name: {0}", p.personName);
+            p.Message = "Hey Everyone!";
+            Console.WriteLine("Message: {0}", p.Message);
+            Console.WriteLine(p.sayHello());
             Console.ReadKey();
         }
     }
