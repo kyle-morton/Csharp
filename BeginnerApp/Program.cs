@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model;
+using System.IO;
 
 namespace BeginnerApp
 {
@@ -18,6 +19,24 @@ namespace BeginnerApp
             Console.WriteLine("Message: {0}", p.Message);
             Console.WriteLine(p.sayHello());
             Console.ReadKey();
+
+            //FILE IO
+
+
+            //POINTERS (Just for show, must be compiled with /unsafe flag)
+            /*
+            unsafe
+            {
+                int i = 5;
+                int* p; //declare ptr p
+                p = &i; //get mem addr of i
+                *p = 10; //assign value pointed to by p to be 10
+
+            }
+            */
+            
+
+
         }
     }
 }

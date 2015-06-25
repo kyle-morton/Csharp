@@ -23,11 +23,9 @@ namespace Model
             }
             set
             {
-<<<<<<< HEAD
+
                 Console.Write("Setting Message!");
-=======
                 Console.WriteLine("Setting Message!");
->>>>>>> sideBranch
                 this.message = value;
             }
         }
